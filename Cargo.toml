@@ -1,0 +1,13 @@
+[package]
+name = "advent20"
+description = "Solutions for Advent of Code 2020."
+version = "0.1.0"
+authors = ["Antoine Bűsch <antoine.busch@gmail.com"]
+edition = "2018"
+
+[dependencies]
+regex = "1.4"
+lazy_static = "1"
+itertools = "0.9.0"
+nom = "6.0.1"
+anyhow = "1.0.34"
