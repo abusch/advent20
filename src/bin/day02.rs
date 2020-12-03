@@ -59,7 +59,7 @@ fn parse_line(input: &str) -> Result<ParsedInput> {
 }
 
 fn main() -> Result<()> {
-    let input = input_string();
+    let input = input_string()?;
     let parsed_lines = input.lines().map(parse_line).collect::<Result<Vec<_>>>()?;
 
     let count = parsed_lines.iter().filter(|&v| verify_password(v)).count();

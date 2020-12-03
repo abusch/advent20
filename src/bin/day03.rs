@@ -50,7 +50,7 @@ impl Terrain {
 struct Slope(usize, usize);
 
 fn main() -> Result<()> {
-    let input = advent20::input_string();
+    let input = advent20::input_string()?;
     let terrain = Terrain::new(&input);
 
     let slope = Slope(3, 1);
@@ -66,7 +66,10 @@ fn main() -> Result<()> {
         Slope(1, 2),
     ];
 
-    let product: u64 = slopes.iter().map(|&s| terrain.count_trees(s) as u64).product();
+    let product: u64 = slopes
+        .iter()
+        .map(|&s| terrain.count_trees(s) as u64)
+        .product();
 
     println!("part 2: {}", product);
 
